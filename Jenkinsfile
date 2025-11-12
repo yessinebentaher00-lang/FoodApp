@@ -14,7 +14,7 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/yessinebentaher00-lang/Test_FoodFrenzy'
+                git branch: 'main', url: 'https://github.com/yessinebentaher00-lang/FoodApp'
             }
         }
 
