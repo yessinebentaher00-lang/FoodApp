@@ -14,7 +14,11 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/yessinebentaher00-lang/FoodApp'
+                checkout([$class: 'GitSCM',
+                          branches: [[name: 'main']],
+                          userRemoteConfigs: [[url: 'https://github.com/yessinebentaher00-lang/FoodApp']],
+                          extensions: [[$class: 'WipeWorkspace']]
+                ])
             }
         }
 
